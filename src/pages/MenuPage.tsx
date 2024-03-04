@@ -11,7 +11,7 @@ const MenuPage = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/nav");
+    navigate("/nav", {state: {from: "menu"}});
   };
   return (
     <article className="menu-page">

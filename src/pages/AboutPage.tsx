@@ -9,7 +9,7 @@ const AboutPage = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/nav");
+    navigate("/nav", {state: {from: "about"}});
   };
   return (
     <>

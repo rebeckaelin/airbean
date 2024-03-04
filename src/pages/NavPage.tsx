@@ -1,10 +1,19 @@
 import "./styles/NavPage.scss";
 import closeIcon from "./../assets/close.svg";
 import line from "./../assets/line.png";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
+import {useState, useEffect} from "react";
 
 function NavPage() {
+  const [previousPage, setPreviousPage] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state && location.state.from) {
+      setPreviousPage(location.state.from);
+    }
+  }, [location]);
 
   const handleClick = (choice: string) => {
     navigate(`/${choice}`);
@@ -16,7 +25,7 @@ function NavPage() {
         className="nav-page__close-icon"
         src={closeIcon}
         alt=""
-        onClick={() => handleClick("")}
+        onClick={() => handleClick(previousPage)}
       />
       <section className="nav-page__menu">
         <p className="menu__item" onClick={() => handleClick("menu")}>
