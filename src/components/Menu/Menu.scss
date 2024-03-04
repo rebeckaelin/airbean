@@ -1,0 +1,27 @@
+.item-container {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 64px 200px 80px;
+  align-items: center;
+}
+.item_title {
+  font-family: PT Serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.item_desc {
+  font-family: Work Sans;
+  font-size: 12px;
+  font-weight: 400;
+}
+.item_price {
+  font-family: PT Serif;
+  font-size: 23px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.add-icon {
+  cursor: pointer;
+}

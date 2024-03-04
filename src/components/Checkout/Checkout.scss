@@ -1,0 +1,35 @@
+.checkout-box {
+  &__icon {
+    background-color: rgba(47, 41, 38, 1);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__bag {
+    width: 16px;
+    height: 21.03px;
+  }
+  &__counter {
+    width: 22px;
+    height: 22px;
+    background-color: rgba(229, 103, 78, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+  &__counter-text {
+    color: white;
+    font-family: PT Serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+}
