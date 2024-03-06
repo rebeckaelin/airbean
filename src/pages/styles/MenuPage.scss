@@ -3,6 +3,8 @@
   width: 375px;
   height: 839px;
   position: relative;
+  color: rgba(47, 41, 38, 1);
+  z-index: 3;
 
   &__header {
     height: 113px;
@@ -29,7 +31,6 @@
       font-weight: 700;
       line-height: 50px;
       margin: 0;
-      padding: 15px;
     }
 
     ul {

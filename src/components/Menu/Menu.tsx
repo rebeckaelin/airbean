@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import addicon from "./../../assets/add.svg";
+import AddProduct from "../AddProduct/AddProduct";
 
 import "./Menu.scss";
 
@@ -26,13 +26,16 @@ const Menu = () => {
   console.log("menuData", menuData);
 
   const displayMenu = () => {
-    return menuData.slice(0, menuData.length - 2).map((item) => {
+    return menuData.map((item) => {
       return (
         <li key={item.id}>
           <div className="item-container">
-            <img className="add-icon" src={addicon} alt="" />
+            <AddProduct id={item.id} title={item.title} price={item.price} />
             <div className="item-textcontainer">
-              <h3 className="item_title">{item.title}</h3>
+              <h3 className="item_title">
+                {item.title}
+                <span>...............................</span>
+              </h3>
               <p className="item_desc">{item.desc}</p>
             </div>
             <p className="item_price">{item.price} kr</p>

@@ -2,15 +2,16 @@
   width: 342px;
   height: 655px;
   background-color: white;
-  z-index: 1;
-  position: fixed;
-  top: 130px;
+  position: absolute;
+  top: 4.5rem;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
+  color: rgba(47, 41, 38, 1);
+  z-index: 3;
 
   h1 {
     font-family: PT Serif;
@@ -21,14 +22,41 @@
   &__display-items {
     width: 311px;
     height: 319px;
-    border: 2px solid black;
 
     ul {
       list-style: none;
     }
   }
+
   &__display-total {
-    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 220px 80px;
+  }
+  &__total-title {
+    font-family: PT Serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: -5px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    span {
+      margin-left: 4px;
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
+  }
+  &__total-text {
+    font-family: Work Sans;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &__price {
+    font-family: PT Serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-left: 10px;
   }
   &__button {
     background-color: rgba(47, 41, 38, 1);
@@ -41,6 +69,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 29px;
+    cursor: pointer;
   }
 }
 
@@ -50,7 +79,6 @@
   border-right: 14px solid transparent;
   border-bottom: 14px solid rgb(255, 255, 255);
   position: absolute;
-  top: -10px; // Positionen kan variera beroende på var du vill ha pilen
-  right: 1px; // Centrerar pilen horisontellt
-  transform: translateX(-50%); // Ser till att pilen är centrerad korrekt
+  top: -10px;
+  right: 15px;
 }

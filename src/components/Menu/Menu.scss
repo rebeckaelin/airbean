@@ -1,13 +1,21 @@
 .item-container {
   margin: 10px;
   display: grid;
-  grid-template-columns: 64px 200px 80px;
+  grid-template-columns: 64px 220px 80px;
   align-items: center;
+  color: rgba(47, 41, 38, 1);
 }
 .item_title {
   font-family: PT Serif;
-  font-size: 23px;
+  font-size: 19px;
   font-weight: 700;
+  text-wrap: nowrap;
+  overflow: hidden;
+  span {
+    margin-left: 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
 }
 
 .item_desc {
@@ -19,7 +27,9 @@
   font-family: PT Serif;
   font-size: 23px;
   font-weight: 700;
-  margin-left: 15px;
+  margin-left: 12px;
+  margin-top: 8px;
+  align-self: first baseline;
 }
 
 .add-icon {
