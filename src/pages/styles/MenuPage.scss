@@ -17,6 +17,8 @@
     padding: 1rem;
   }
   &__nav-icon {
+    position: relative;
+    z-index: 2;
     cursor: pointer;
   }
 

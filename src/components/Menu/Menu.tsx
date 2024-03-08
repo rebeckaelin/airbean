@@ -23,7 +23,6 @@ const Menu = () => {
   useEffect(() => {
     fetchMenu();
   }, []);
-  console.log("menuData", menuData);
 
   const displayMenu = () => {
     return menuData.map((item) => {
@@ -31,21 +30,21 @@ const Menu = () => {
         <li key={item.id}>
           <div className="item-container">
             <AddProduct id={item.id} title={item.title} price={item.price} />
-            <div className="item-textcontainer">
-              <h3 className="item_title">
+            <div>
+              <h3 className="item-container__title">
                 {item.title}
-                <span>...............................</span>
+                <span>....................................</span>
               </h3>
-              <p className="item_desc">{item.desc}</p>
+              <p className="item-container__desc">{item.desc}</p>
             </div>
-            <p className="item_price">{item.price} kr</p>
+            <p className="item-container__price">{item.price} kr</p>
           </div>
         </li>
       );
     });
   };
 
-  return <div>{displayMenu()}</div>;
+  return <>{displayMenu()}</>;
 };
 
 export default Menu;

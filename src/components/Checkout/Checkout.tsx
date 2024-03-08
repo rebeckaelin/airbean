@@ -19,9 +19,7 @@ const Checkout = () => {
       <section className="checkout-box__counter">
         <p className="checkout-box__counter-text">{cartCount}</p>
       </section>
-      <div
-        className={`overlay ${showDropdown ? "visible" : ""}`}
-        onClick={() => console.log("Overlay clicked!")}></div>
+      <div className={`overlay ${showDropdown ? "visible" : ""}`}></div>
       {showDropdown && <CartPage />}
     </>
   );

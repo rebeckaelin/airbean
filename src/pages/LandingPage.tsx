@@ -8,7 +8,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/nav");
+    navigate("/menu");
   };
   return (
     <>

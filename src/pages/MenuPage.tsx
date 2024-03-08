@@ -4,14 +4,13 @@ import header_img from "./../assets/header_menu.svg";
 import footer_img from "./../assets/footer_menu.svg";
 import Menu from "./../components/Menu/Menu";
 import Checkout from "../components/Checkout/Checkout";
-
-import {useNavigate} from "react-router-dom";
+import {useState} from "react";
+import NavPage from "../components/Nav/NavPage";
 
 const MenuPage = () => {
-  const navigate = useNavigate();
-
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const handleClick = () => {
-    navigate("/nav", {state: {from: "menu"}});
+    setIsOverlayVisible(true);
   };
   return (
     <article className="menu-page">
@@ -30,15 +29,16 @@ const MenuPage = () => {
       </header>
       <article className="menu-container">
         <h1 className="menu-container__title">Meny</h1>
-        <article className="menu">
-          <ul>
-            <Menu />
-          </ul>
-        </article>
+        <ul>
+          <Menu />
+        </ul>
       </article>
       <footer
         className="menu-page__footer"
         style={{backgroundImage: `url(${footer_img})`}}></footer>
+      {isOverlayVisible && (
+        <NavPage closeNav={() => setIsOverlayVisible(false)} />
+      )}
     </article>
   );
 };

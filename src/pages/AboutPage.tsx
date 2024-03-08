@@ -3,13 +3,13 @@ import header_img from "./../assets/header_menu.svg";
 import nav_icon from "./../assets/navicon.svg";
 import owner_img from "./../assets/Owner.svg";
 import footer_img from "./../assets/footer_menu.svg";
-import {useNavigate} from "react-router-dom";
+import {useState} from "react";
+import NavPage from "../components/Nav/NavPage";
 
 const AboutPage = () => {
-  const navigate = useNavigate();
-
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const handleClick = () => {
-    navigate("/nav", {state: {from: "about"}});
+    setIsOverlayVisible(true);
   };
   return (
     <>
@@ -59,6 +59,9 @@ const AboutPage = () => {
         <footer
           className="about-page__footer"
           style={{backgroundImage: `url(${footer_img})`}}></footer>
+        {isOverlayVisible && (
+          <NavPage closeNav={() => setIsOverlayVisible(false)} />
+        )}
       </article>
     </>
   );

@@ -1,10 +1,53 @@
 import "./styles/CartPage.scss";
-
+import {useNavigate} from "react-router-dom";
 import CartItem from "../components/CartItem/CartItem";
 import {useCheckoutStore} from "../Store/Cart";
 
+interface RequestBodyData {
+  details: {
+    order: {
+      name: string;
+      price: number;
+    }[];
+  };
+}
 const CartPage = () => {
-  const {totalSum} = useCheckoutStore();
+  const {totalSum, cart, setOrderNumber, resetCart} = useCheckoutStore();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    const requestBody = {
+      details: {
+        order: cart.flatMap((item) =>
+          Array.from({length: item.quantity}, () => ({
+            name: item.title,
+            price: item.price,
+          }))
+        ),
+      },
+    };
+
+    async function fetchData(body: RequestBodyData) {
+      try {
+        const url =
+          "https://airbean-api-xjlcn.ondigitalocean.app/api/beans/order";
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(body),
+        });
+        const data = await response.json();
+        setOrderNumber(data.orderNr);
+      } catch (error) {
+        console.error("error:", error);
+      }
+    }
+
+    navigate("/status");
+
+    fetchData(requestBody);
+    resetCart();
+  };
   return (
     <>
       <article className="cart-page">
@@ -23,7 +66,12 @@ const CartPage = () => {
           </article>
           <p className="cart-page__price">{totalSum} kr</p>
         </section>
-        <button className="cart-page__button">Take my money!</button>
+        <button
+          className="cart-page__button"
+          onClick={() => handleClick()}
+          disabled={cart.length === 0}>
+          Take my money!
+        </button>
       </article>
     </>
   );

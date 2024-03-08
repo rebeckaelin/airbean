@@ -4,6 +4,9 @@ interface Checkout {
   cart: Item[];
   cartCount: number;
   totalSum: number;
+  orderNumber: string;
+  resetCart: () => void;
+  setOrderNumber: (orderNumber: string) => void;
   increaseQuantity: (id: string) => void;
   decreaseQuantity: (id: string) => void;
   addToCart: (item: Item) => void;
@@ -20,6 +23,11 @@ export const useCheckoutStore = create<Checkout>((set) => ({
   cart: [],
   cartCount: 0,
   totalSum: 0,
+  orderNumber: "",
+
+  setOrderNumber: (orderNumber) => set({orderNumber}),
+
+  resetCart: () => set({cart: [], cartCount: 0, totalSum: 0}),
 
   addToCart: (item) => {
     set((state) => {
