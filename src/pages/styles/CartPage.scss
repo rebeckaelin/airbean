@@ -20,12 +20,17 @@
     line-height: 38px;
   }
   &__display-items {
-    width: 311px;
+    max-width: 311px;
     height: 319px;
+    max-height: 100vh;
+    overflow-y: auto;
 
     ul {
       list-style: none;
     }
+  }
+  &__display-items::-webkit-scrollbar {
+    width: 0px;
   }
 
   &__display-total {

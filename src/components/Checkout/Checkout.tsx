@@ -13,7 +13,11 @@ const Checkout = () => {
         className="checkout-box"
         onClick={() => setShowDropdown(!showDropdown)}>
         <section className="checkout-box__icon">
-          <img className="checkout-box__bag" src={checkout_bag} alt="" />
+          <img
+            className="checkout-box__bag"
+            src={checkout_bag}
+            alt="checkout_icon"
+          />
         </section>
       </section>
       <section className="checkout-box__counter">

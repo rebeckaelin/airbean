@@ -12,7 +12,7 @@ const CartItem = () => {
           <article className="cart-item__text-container">
             <h2 className="cart-item__title">
               {item.title}
-              <span>....................................</span>
+              <span>..............................................</span>
             </h2>
 
             <p className="cart-item__price">{item.itemSum} kr</p>

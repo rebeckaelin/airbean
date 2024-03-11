@@ -1,0 +1,95 @@
+.login-page {
+  width: 341px;
+  height: 565.77px;
+  border-radius: 3px;
+  background-color: rgba(243, 228, 225, 1);
+  color: rgba(47, 41, 38, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 80px;
+  left: 15px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  img {
+    margin-top: 25px;
+  }
+  &__title {
+    font-family: PT Serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+  }
+  &__desc {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  label {
+    font-family: Work Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  input {
+    display: flex;
+    background-color: rgba(243, 228, 225, 1);
+    width: 310px;
+    height: 48px;
+    border-radius: 6px;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 7px 0;
+    padding-left: 15px;
+  }
+
+  button {
+    margin-top: 45px;
+    width: 248px;
+    height: 55px;
+    border-radius: 50px;
+    font-family: PT Serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    background-color: rgba(47, 41, 38, 1);
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+  .gdpr {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 2px;
+    p {
+      margin-left: 8px;
+      font-family: Work Sans;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+    &-dot {
+      width: 12px;
+      height: 12px;
+      background-color: rgba(14, 146, 125, 1);
+      border-radius: 50%;
+      border: 1.5px solid white;
+      box-shadow: 0 0 0 1.5px rgba(47, 41, 38, 1);
+      cursor: pointer;
+    }
+  }
+}
