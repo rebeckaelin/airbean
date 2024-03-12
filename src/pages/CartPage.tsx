@@ -44,7 +44,6 @@ const CartPage = () => {
     }
 
     navigate("/status");
-
     fetchData(requestBody);
     resetCart();
   };

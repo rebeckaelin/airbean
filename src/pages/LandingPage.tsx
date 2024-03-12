@@ -15,9 +15,21 @@ const LandingPage = () => {
   return (
     <>
       <section className="landing-page" onClick={() => handleClick()}>
-        <img className="landing-page__img--left" src={header_left} alt="" />
-        <img className="landing-page__logo" src={airbean_logo} alt="" />
-        <img className="landing-page__img--right" src={header_right} alt="" />
+        <img
+          className="landing-page__img--left"
+          src={header_left}
+          alt="leaf-image"
+        />
+        <img
+          className="landing-page__logo"
+          src={airbean_logo}
+          alt="airbean-logo"
+        />
+        <img
+          className="landing-page__img--right"
+          src={header_right}
+          alt="leaf image"
+        />
       </section>
       {isOverlayVisible && (
         <NavPage closeNav={() => setIsOverlayVisible(false)} />

@@ -21,7 +21,7 @@ const MenuPage = () => {
           <img
             className="menu-page__nav-icon"
             src={navicon}
-            alt=""
+            alt="navigation-icon"
             onClick={() => handleClick()}
           />
           <Checkout />

@@ -21,12 +21,12 @@ const ProfilePage = () => {
           <img
             className="profile-page__nav-icon"
             src={navIcon}
-            alt=""
+            alt="navigation-icon"
             onClick={() => handleClick()}
           />
         </header>
         <section className="profile-page__user-info">
-          <img src={avatar} alt="" />
+          <img src={avatar} alt="avatar-picture" />
           <h1>Rebban Rebzon</h1>
           <p>rebban@rebz.rebz</p>
         </section>
@@ -39,7 +39,7 @@ const ProfilePage = () => {
             <p className="profile-page__order-date">20/03/06</p>
             <p>total ordersumma</p>
             <p className="profile-page__order-price">443 kr</p>
-            <img src={line} alt="" />
+            <img src={line} alt="line" />
           </section>
           <section className="profile-page__order-history-item">
             <p>
@@ -48,7 +48,7 @@ const ProfilePage = () => {
             <p className="profile-page__order-date">20/03/03</p>
             <p>total ordersumma</p>
             <p className="profile-page__order-price">333 kr</p>
-            <img src={line} alt="" />
+            <img src={line} alt="line" />
           </section>
           <section className="profile-page__order-history-item">
             <p>

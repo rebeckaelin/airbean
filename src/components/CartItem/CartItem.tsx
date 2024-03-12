@@ -20,13 +20,13 @@ const CartItem = () => {
           <section className="cart-item__quantity-container">
             <img
               src={increase}
-              alt=""
+              alt="increase-arrow"
               onClick={() => increaseQuantity(item.id)}
             />
             <p className="cart-item__quantity"> {item.quantity} </p>
             <img
               src={decrease}
-              alt=""
+              alt="decrease-arrow"
               onClick={() => decreaseQuantity(item.id)}
             />
           </section>

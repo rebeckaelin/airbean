@@ -20,7 +20,7 @@ const StatusPage = () => {
       const data = await res.json();
       setEta(data.eta);
     } catch (error) {
-      // console.error("Error fetching ETA:", error);
+      console.error("Error fetching ETA:", error);
     }
   };
 

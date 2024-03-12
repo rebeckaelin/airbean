@@ -20,7 +20,7 @@ const AboutPage = () => {
           <img
             className="header__nav-icon"
             src={nav_icon}
-            alt=""
+            alt="navigation-icon"
             onClick={() => handleClick()}
           />
         </header>
@@ -54,7 +54,7 @@ const AboutPage = () => {
               flavour, milk aromatic turkish skinny crema.
             </p>
           </section>
-          <img className="main__image" src={owner_img} alt="" />
+          <img className="main__image" src={owner_img} alt="image" />
         </main>
         <footer
           className="about-page__footer"

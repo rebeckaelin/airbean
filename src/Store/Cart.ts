@@ -11,10 +11,11 @@ interface Checkout {
   decreaseQuantity: (id: string) => void;
   addToCart: (item: Item) => void;
 }
-interface Item {
+export interface Item {
   title: string;
   price: number;
   id: string;
+  desc: string;
   quantity: number;
   itemSum: number;
 }
